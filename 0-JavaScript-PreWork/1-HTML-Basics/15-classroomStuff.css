@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    color: lightgreen;
+}
+
+h3 {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+
+.thickBlack {
+    border: solid thick black;
+    border-radius: 2em;
+    background-color: grey;
+    text-align: center;
+}
+
+.border2 {
+    border: solid 2px black;
+    border-radius: 1.5em;
+    background-color: lightgrey;
+    text-align: center;
+    display: inline-block;
+    width: 32%;
+    margin-bottom: 0.2em;
+}
+
+table {
+    border: solid 2px black;
+    background-color: lightskyblue;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0.20em;
+}
+
+.movieTitle {
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+}
+
+th, td {
+    padding: 0.30em;
+}

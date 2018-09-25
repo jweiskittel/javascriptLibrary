@@ -1,0 +1,49 @@
+API - Application Programming Interface
+- an API is a junction between the client side and server side
+-APIs can translate between different languages
+
+
+Client - the computer that the user is on
+- displays data for the user
+- renders items to the DOM
+- make HTTP requests to the server
+
+HTTP - Hypertext Transfer Protocol
+- used to send Requests:
+-POST: creates new information
+-GET: retrieves existing information
+-PUT: overwrites or updates existing information
+-DELETE: deletes existing information
+- there are over 20 'requests' but these are the 4 most commonly used
+
+JSON - JavaScript Object Notation
+- passes data between the browser and the server
+- converts any JavaScript object into readable text
+
+API Endpoints - the url that the client application uses to communicate with the server
+- theoretically it is the file path to what you are trying to access
+
+Response - a three digit number that tells you if your code is doing what you want
+1xx - Informational - Request received, continuing process
+2xx - Success - The action was successfully received, understood, and accepted
+3xx - Redirection - Further action must be taken in order to complete the requests
+4xx - Client Error - The request contains bad syntax or cannot be fulfilled
+5xx - Server Error - The server failed to fulfill an apparently valid request
+
+Statelessness
+- this means that ther server does not store any data from the request
+- HTTP is a statelessness language 
+
+REST - Representational State Transfer
+Rules of REST:
+- Client and server are seperate
+- Stateless
+- Cacheable: Responses from the server have to let the client know if they are cacheable 
+- Layered system: Multiple servers
+- Code on demand: Optional - the ability to pass code from server to client
+- Uniform interface: 
+Identification of resources: All resources have an identifier, a separate way of conceptualizing those resources, that are not simply the resource themselves. So the resource can be in JSON or any format, which is not necessarily the structure or type of the resource on the server. 
+
+Self-descriptive messages: Each message includes enough information to know what to do with it, without needing any other outside information. So for example, it'll tell you it's JSON so the client can interpret it.
+
+Resource manipulation through representations: The client has enough information to edit and delete the resource.
