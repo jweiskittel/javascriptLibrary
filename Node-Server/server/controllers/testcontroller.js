@@ -5,6 +5,18 @@ var TestModel = sequelize.import('../models/test')
 
 router.post('/one', (req, res) => res.send('Test 1 went through!'))
 
+router.get('/one', (req, res) => {
+    TestModel.findAll({attributes: ['id', 'testdata']})
+    .then(findAllSuccess = data => {
+        console.log('Controller data:', data)
+        res.json(data)
+    },
+    findAllError = err => res.send(500, err.message)
+    )
+})
+
+
+
 router.post('/two', (req, res) => {
     let testData = 'Test data for endpoint two'
 
