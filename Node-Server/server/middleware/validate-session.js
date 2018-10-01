@@ -2,9 +2,9 @@ var jwt = require('jsonwebtoken')
 var User = require('../db').import('../models/user')
 
 module.exports = (req, res, next) => {
-    // if (req.method == 'OPTIONS) {
-    //    next()
-    // } else {
+    if (req.method == 'OPTIONS') {
+       next()
+    } else {
         var sessionToken = req.headers.authorization
         console.log(sessionToken)
         if (!sessionToken) return res.status(403).send({auth: false, message: 'No token provided.'})
@@ -23,5 +23,5 @@ module.exports = (req, res, next) => {
                 }
             })
         }
-  //  }
+   }
 }

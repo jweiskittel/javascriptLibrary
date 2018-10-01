@@ -28,8 +28,8 @@ router.post('/createuser', (req, res) => {
 })
 
 router.post('/signin', (req, res) => {
-    User.findOne( { where: { username: req.body.user.username }}).then(
-        function(user) {
+    User.findOne( { where: { username: req.body.user.username }})
+    .then(user => {
             if (user) {
                 bcrypt.compare(req.body.user.password, user.passwordhash, (err, matches) => {
                     if (matches) {
